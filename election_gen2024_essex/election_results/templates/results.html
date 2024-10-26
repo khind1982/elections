@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Results: General Election 2024, Essex</h1>
+<table>
+    <tr>
+        <th>Constituency</th>
+        <th>Conservative</th>
+        <th>Labour</th>
+        <th>Liberal Democrats</th>
+        <th>Reform</th>
+        <th>Majority</th>
+        <th>Combined Conservative/Reform</th>
+    </tr>
+    {% for x in election_results %}
+    <tr>
+        <td>{{ x.constituency }}</td>
+        <td>{{ x.conservative }}</td>
+        <td>{{ x.labour }}</td>
+        <td>{{ x.liberaldemocrat }}</td>
+        <td>{{ x.reform }}</td>
+        <td>{{ x.majority }}</td>
+        <td>{{ x.combined_conreform }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

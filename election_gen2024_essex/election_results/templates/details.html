@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+{% extends "master.html" %}
+
+{% block title %}
+Election Results for {{ result.constituency }}
+{% endblock %}
+
+{% block content %}
+<h1>{{ result.constituency }}</h1>
+  
+<p>Conservative: {{ result.conservative }}</p>
+<p>Labour: {{ result.labour }}</p>
+<p>Liberal Democrat: {{ result.liberaldemocrat }}</p>
+<p>Reform: {{ result.reform }}</p>
+<p><b>Majority: {{ result.majority }}</b></p>
+
+<p>Combined result of Conservative and Reform: {{ result.combined_conreform }}</p>
+
+<p>Back to <a href="/results">results page</a></p>
+{% endblock %}
+</body>
+</html>

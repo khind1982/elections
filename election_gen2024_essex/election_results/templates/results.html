@@ -2,6 +2,13 @@
 <html>
 <body>
 
+{% extends "master.html" %}
+
+{% block title %}
+Election Results Essex 2024 - List of all constituencies
+{% endblock %}
+
+{% block content %}
 <h1>Results: General Election 2024, Essex</h1>
 <table>
     <tr>
@@ -15,7 +22,7 @@
     </tr>
     {% for x in election_results %}
     <tr>
-        <td>{{ x.constituency }}</td>
+        <td><a href="details/{{ x.id }}">{{ x.constituency }}</a></td>
         <td>{{ x.conservative }}</td>
         <td>{{ x.labour }}</td>
         <td>{{ x.liberaldemocrat }}</td>
@@ -25,5 +32,6 @@
     </tr>
     {% endfor %}
 </table>
+{% endblock %}
 </body>
 </html>

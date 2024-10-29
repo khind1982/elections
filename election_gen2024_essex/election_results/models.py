@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class GEResults(models.Model):
     constituency = models.CharField(max_length=255)
@@ -9,3 +10,6 @@ class GEResults(models.Model):
     reform = models.IntegerField()
     majority = models.IntegerField()
     combined_conreform = models.IntegerField(null=True)
+
+    def __str__(self):
+        return f"{self.constituency}"

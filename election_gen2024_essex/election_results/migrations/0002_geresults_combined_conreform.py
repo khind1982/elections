@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('election_results', '0001_initial'),
+        ("election_results", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='geresults',
-            name='combined_conreform',
+            model_name="GEResults",
+            name="combined_conreform",
             field=models.IntegerField(null=True),
         ),
     ]
